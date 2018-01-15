@@ -18,7 +18,7 @@ namespace TDDKata_TennisGame
     {
         public string Score()
         {
-            throw new System.NotImplementedException();
+            return "Love-All";
         }
     }
 }
