@@ -26,26 +26,53 @@ namespace TDDKata_TennisGame
 
         public string Score()
         {
-            if (_firstPlayerScore == _secondPlayerScore)
-            {
-                if (_firstPlayerScore >= 3)
-                {
-                    return "Deuce";
-                }
-                return _scoreDictionary[_firstPlayerScore] + "-All";
-            }
+            return IsSameScore()
+                ? (IsDeuce() ? Deuce() : SameScore())
+                : (ReadyForWin() ? AdvOrWinPlayer() : NormalScore());
+        }
 
-            if (_firstPlayerScore > 3 || _secondPlayerScore > 3)
-            {
-                var advPlayer = _firstPlayerScore > _secondPlayerScore ? _firstPlayerName : _secondPlayerName;
+        private bool IsSameScore()
+        {
+            return _firstPlayerScore == _secondPlayerScore;
+        }
 
-                if (Math.Abs(_firstPlayerScore - _secondPlayerScore) == 1)
-                {
-                    return advPlayer + " Adv";
-                }
-                return advPlayer + " Win";
-            }
+        private static string Deuce()
+        {
+            return "Deuce";
+        }
 
+        private bool IsDeuce()
+        {
+            return _firstPlayerScore >= 3;
+        }
+
+        private string SameScore()
+        {
+            return _scoreDictionary[_firstPlayerScore] + "-All";
+        }
+
+        private string AdvOrWinPlayer()
+        {
+            return AdvPlayer() + (IsAdv() ? " Adv" : " Win");
+        }
+
+        private bool ReadyForWin()
+        {
+            return _firstPlayerScore > 3 || _secondPlayerScore > 3;
+        }
+
+        private string AdvPlayer()
+        {
+            return _firstPlayerScore > _secondPlayerScore ? _firstPlayerName : _secondPlayerName;
+        }
+
+        private bool IsAdv()
+        {
+            return Math.Abs(_firstPlayerScore - _secondPlayerScore) == 1;
+        }
+
+        private string NormalScore()
+        {
             return _scoreDictionary[_firstPlayerScore] + "-" + _scoreDictionary[_secondPlayerScore];
         }
 
