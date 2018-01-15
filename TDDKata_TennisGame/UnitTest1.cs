@@ -106,7 +106,7 @@ namespace TDDKata_TennisGame
         public void DZ_Adv()
         {
             tennisGame.SetFirstPlayerScore(3);
-            tennisGame.SetSecondPlayerScore(5);
+            tennisGame.SetSecondPlayerScore(4);
             ScoreShouldBe("DZ Adv");
         }
 
