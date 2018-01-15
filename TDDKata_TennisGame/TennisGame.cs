@@ -43,7 +43,7 @@ namespace TDDKata_TennisGame
                 {
                     return advPlayer + " Adv";
                 }
-                return _firstPlayerName + " Win";
+                return advPlayer + " Win";
             }
 
             return _scoreDictionary[_firstPlayerScore] + "-" + _scoreDictionary[_secondPlayerScore];
