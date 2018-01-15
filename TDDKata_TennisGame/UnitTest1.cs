@@ -24,12 +24,4 @@ namespace TDDKata_TennisGame
             Assert.AreEqual(expected, score);
         }
     }
-
-    public class TennisGame
-    {
-        public string Score()
-        {
-            return "Love-All";
-        }
-    }
 }
