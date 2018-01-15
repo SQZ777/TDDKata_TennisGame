@@ -62,6 +62,22 @@ namespace TDDKata_TennisGame
             ScoreShouldBe("Fifteen-All");
         }
 
+        [TestMethod]
+        public void Thirty_All()
+        {
+            tennisGame.SetFirstPlayerScore(2);
+            tennisGame.SetSecondPlayerScore(2);
+            ScoreShouldBe("Thirty-All");
+        }
+
+        [TestMethod]
+        public void Deuce()
+        {
+            tennisGame.SetFirstPlayerScore(3);
+            tennisGame.SetSecondPlayerScore(3);
+            ScoreShouldBe("Deuce");
+        }
+
         private void ScoreShouldBe(string expected)
         {
             var score = tennisGame.Score();
