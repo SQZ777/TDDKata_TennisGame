@@ -7,7 +7,8 @@ namespace TDDKata_TennisGame
 
         private int _firstPlayerScore;
         private int _secondPlayerScore;
-
+        private string _firstPlayerName;
+        private string _secondPlayerName;
         private readonly Dictionary<int, string> _scoreDictionary = new Dictionary<int, string>
         {
             {0, "Love"},
@@ -15,6 +16,12 @@ namespace TDDKata_TennisGame
             {2, "Thirty"},
             {3, "Forty"}
         };
+
+        public TennisGame(string firstPlayerName, string secondPlayerName)
+        {
+            this._firstPlayerName = firstPlayerName;
+            this._secondPlayerName = secondPlayerName;
+        }
 
         public string Score()
         {

@@ -5,7 +5,7 @@ namespace TDDKata_TennisGame
     [TestClass]
     public class UnitTest1
     {
-        TennisGame tennisGame = new TennisGame();
+        TennisGame tennisGame = new TennisGame("Lin","DZ");
         [TestMethod]
         public void Love_All()
         {
@@ -84,6 +84,14 @@ namespace TDDKata_TennisGame
             tennisGame.SetFirstPlayerScore(4);
             tennisGame.SetSecondPlayerScore(4);
             ScoreShouldBe("Deuce");
+        }
+
+        [TestMethod]
+        public void Lin_Adv()
+        {
+            tennisGame.SetFirstPlayerScore(4);
+            tennisGame.SetSecondPlayerScore(3);
+            ScoreShouldBe("Lin Adv");
         }
 
         private void ScoreShouldBe(string expected)
