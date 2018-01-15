@@ -18,10 +18,16 @@ namespace TDDKata_TennisGame
 
         public string Score()
         {
+            if (_firstPlayerScore == _secondPlayerScore)
+            {
+                return _scoreDictionary[_firstPlayerScore] + "-All";
+            }
+
             if (_firstPlayerScore > 0 || _secondPlayerScore > 0)
             {
                 return _scoreDictionary[_firstPlayerScore] + "-" + _scoreDictionary[_secondPlayerScore];
             }
+
             return "Love-All";
         }
 
