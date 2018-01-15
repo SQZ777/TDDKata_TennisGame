@@ -33,6 +33,13 @@ namespace TDDKata_TennisGame
             ScoreShouldBe("Forty-Love");
         }
 
+        [TestMethod]
+        public void Love_Fifteen()
+        {
+            tennisGame.SetSecondPlayerScore(1);
+            ScoreShouldBe("Love-Fifteen");
+        }
+
         private void ScoreShouldBe(string expected)
         {
             var score = tennisGame.Score();
