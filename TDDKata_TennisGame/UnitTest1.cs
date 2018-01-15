@@ -95,11 +95,11 @@ namespace TDDKata_TennisGame
         }
 
         [TestMethod]
-        public void DZ_Adv()
+        public void Lin_Win()
         {
+            tennisGame.SetFirstPlayerScore(5);
             tennisGame.SetFirstPlayerScore(3);
-            tennisGame.SetFirstPlayerScore(4);
-            ScoreShouldBe("DZ Adv");
+            ScoreShouldBe("Lin Win");
         }
 
         private void ScoreShouldBe(string expected)

@@ -43,8 +43,8 @@ namespace TDDKata_TennisGame
                 }
             }
             return _scoreDictionary[_firstPlayerScore] + "-" + _scoreDictionary[_secondPlayerScore];
-
         }
+
 
         public void SetFirstPlayerScore(int n)
         {
