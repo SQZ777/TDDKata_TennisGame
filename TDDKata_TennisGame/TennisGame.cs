@@ -20,6 +20,10 @@ namespace TDDKata_TennisGame
         {
             if (_firstPlayerScore == _secondPlayerScore)
             {
+                if (_firstPlayerScore >= 3)
+                {
+                    return "Deuce";
+                }
                 return _scoreDictionary[_firstPlayerScore] + "-All";
             }
             return _scoreDictionary[_firstPlayerScore] + "-" + _scoreDictionary[_secondPlayerScore];
