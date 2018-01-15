@@ -35,13 +35,15 @@ namespace TDDKata_TennisGame
                 return _scoreDictionary[_firstPlayerScore] + "-All";
             }
 
-            if (_firstPlayerScore >= 3 && _secondPlayerScore >= 3)
+            if (_firstPlayerScore > 3 || _secondPlayerScore > 3)
             {
                 if (Math.Abs(_firstPlayerScore - _secondPlayerScore) == 1)
                 {
                     return _firstPlayerName + " Adv";
                 }
+                return _firstPlayerName + " Win";
             }
+            
             return _scoreDictionary[_firstPlayerScore] + "-" + _scoreDictionary[_secondPlayerScore];
         }
 

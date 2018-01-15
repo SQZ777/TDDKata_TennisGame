@@ -98,7 +98,7 @@ namespace TDDKata_TennisGame
         public void Lin_Win()
         {
             tennisGame.SetFirstPlayerScore(5);
-            tennisGame.SetFirstPlayerScore(3);
+            tennisGame.SetSecondPlayerScore(3);
             ScoreShouldBe("Lin Win");
         }
 
