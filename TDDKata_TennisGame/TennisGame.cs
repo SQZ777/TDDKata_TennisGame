@@ -22,13 +22,8 @@ namespace TDDKata_TennisGame
             {
                 return _scoreDictionary[_firstPlayerScore] + "-All";
             }
+            return _scoreDictionary[_firstPlayerScore] + "-" + _scoreDictionary[_secondPlayerScore];
 
-            if (_firstPlayerScore > 0 || _secondPlayerScore > 0)
-            {
-                return _scoreDictionary[_firstPlayerScore] + "-" + _scoreDictionary[_secondPlayerScore];
-            }
-
-            return "Love-All";
         }
 
         public void SetFirstPlayerScore(int n)
