@@ -15,6 +15,7 @@ namespace TDDKata_TennisGame
         [TestMethod]
         public void Fifteen_Love()
         {
+            tennisGame.SetFirstPlayerScore(1);
             ScoreShouldBe("Fifteen-Love");
         }
 
