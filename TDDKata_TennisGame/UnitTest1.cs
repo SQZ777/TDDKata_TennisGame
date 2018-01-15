@@ -110,6 +110,14 @@ namespace TDDKata_TennisGame
             ScoreShouldBe("DZ Adv");
         }
 
+        [TestMethod]
+        public void DZ_Win()
+        {
+            tennisGame.SetFirstPlayerScore(3);
+            tennisGame.SetSecondPlayerScore(5);
+            ScoreShouldBe("DZ Win");
+        }
+
         private void ScoreShouldBe(string expected)
         {
             var score = tennisGame.Score();
