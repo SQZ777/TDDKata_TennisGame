@@ -78,6 +78,14 @@ namespace TDDKata_TennisGame
             ScoreShouldBe("Deuce");
         }
 
+        [TestMethod]
+        public void When_4_4_Then_Deuce()
+        {
+            tennisGame.SetFirstPlayerScore(4);
+            tennisGame.SetSecondPlayerScore(4);
+            ScoreShouldBe("Deuce");
+        }
+
         private void ScoreShouldBe(string expected)
         {
             var score = tennisGame.Score();
